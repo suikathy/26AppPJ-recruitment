@@ -16,7 +16,12 @@
     opacity: 0;
   }
 }
-
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif !important;
+}
 .animate-scroll-vertical {
   /* infinite でループさせます */
   animation: scroll-vertical 3s linear infinite;
