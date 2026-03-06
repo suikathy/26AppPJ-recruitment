@@ -277,18 +277,18 @@ const ConceptSection = () => {
           </div>
 
           {/* テキスト段落（順番にフワッと出るようにdelayを設定） */}
-          <div className="space-y-10 text-xl md:text-2xl font-bold leading-loose text-black">
+          <div className="space-y-10 text-[18px] md:text-2xl font-bold leading-loose text-black">
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.2s' }}>
               早稲田祭初のアプリを作る。<br />僕は、なんでそんなことするのか。<br />ただ、見てみたくなったから。
             </p>
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.4s' }}>
-              僕たちが作ったアプリで<br />来場者・さんさんが企画を楽しんでる瞬間。<br />隈ステのバックスクリーンで広報されてる瞬間。<br />早稲田を、日本を、世界を震わせる瞬間。
+              僕たちが作ったアプリで<br />来場者・さんさんが<br className="md:hidden"/>企画を楽しんでる瞬間。<br />隈ステのバックスクリーンで<br className="md:hidden"/>広報されてる瞬間。<br />早稲田を、日本を、<br className="md:hidden"/>世界を震わせる瞬間。
             </p>
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.6s' }}>
               能力だって、調整だって、<br />アプリの意義だって、全部後付け。
             </p>
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.8s' }}>
-              できたら、やばい。できたら、やばい。<br />本当にできてしまったら、やばい。<br />をともに実現しよう。
+              できたら、やばい。<br className="md:hidden"/>できたら、やばい。<br />本当にできてしまったら、やばい。<br />をともに実現しよう。
             </p>
           </div>
         </div>
@@ -389,7 +389,7 @@ const RequirementSection = () => {
                 タイムテーブル
               </h2>
             </h1>
-            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] text-right z-10">
+            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] text-right relative z-10">
               時系列で企画を把握！
               <br />
               当日の動きを最適化し、
@@ -409,7 +409,7 @@ const RequirementSection = () => {
                 マイタイムテーブル
               </h2>
             </h1>
-            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] z-100">
+            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] relative z-10">
               お気に入り企画を登録して、
               <br />
               自分だけのスケジュールを作成！
@@ -431,7 +431,7 @@ const RequirementSection = () => {
               </h2>
             </h1>
 
-            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] text-right z-10">
+            <p className="text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] text-right relative z-10">
               公式グッズの情報も丸わかり！！
               <br />
               リアルタイムで在庫情報を確認！
@@ -484,7 +484,7 @@ const RolesSection = () => {
         {
           id: "planner",
           title: "アプリ広報\nプランナー",
-          dialogTitle: "アプリ広報プランナー",
+          dialogTitle: "アプリ広報\nプランナー",
           color: "text-[#8CC63F]",
           description:
             "・SNS、YouTube、サイトを用いた広報コンテンツを構想します。\n・アプリ認知度向上のためのユニークな広報企画を立案、実行します。",
@@ -493,7 +493,7 @@ const RolesSection = () => {
         {
           id: "ux-designer",
           title: "アプリ体験\nデザイナー",
-          dialogTitle: "アプリ体験デザイナー",
+          dialogTitle: "アプリ体験\nデザイナー",
           color: "text-[#8CC63F]",
           description:
             "・アプリ内のユーザー体験向上のためのアプリ独自の企画、コンテンツを立案、実行します。\n・アプリと他チームの連携企画の調整および運営をします。",
@@ -569,11 +569,16 @@ const RolesSection = () => {
               ×
             </button>
 
-            {/* ① タイトルを一番上に配置（Flexboxの外） */}
             <h3
               className={`text-4xl md:text-5xl font-black mb-10 ${selectedRole.color} leading-tight`}
             >
-              {selectedRole.dialogTitle}
+              {/* \n を md:hidden な <br> に変換して出力 */}
+              {selectedRole.dialogTitle.split('\n').map((line, index, array) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < array.length - 1 && <br className="md:hidden" />}
+                </React.Fragment>
+              ))}
             </h3>
 
             {/* ② 画像と説明文を横並びのFlexboxに */}
