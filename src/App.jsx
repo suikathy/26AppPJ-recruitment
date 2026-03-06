@@ -295,18 +295,14 @@ const ConceptSection = () => {
       </div>
 
       <div className="absolute top-10 right-0 h-[90%] z-0 pointer-events-none">
-        <img src="../src/assets/tree.png" alt="" className="max-h-full relative hidden md:block" style={{ objectPosition: "right center" }} />
+        <img src="src\assets\tree.png" alt="" className="max-h-full relative hidden md:block" style={{ objectPosition: "right center" }} />
         <AppleShape className="absolute bottom-20 w-20 h-auto fill-[#f5f5f5]" />
         <AppleShape className="absolute bottom-30 left-1/4 rotate-[-60deg] w-25 h-auto fill-[#FF4B4B]" />
       </div>
     </section>
   );
 };
-const SmartPhoneImages = {
-  map: "src/assets/appimage1.png", // 01: 地図
-  timetable: "src/assets/appimage2.png", // 02: タイムテーブル
-  goods: "src/assets/appimage3.png", // 03: マイタイムテーブル (画像内容から推測)
-};
+
 
 const SectionTitle = ({ enTitle, jaTitle, className = "" }) => (
   // classNameを追加で受け取れるようにしておくと、特定の場所だけ余白を変えたい時などに便利です
@@ -378,10 +374,10 @@ const RequirementSection = () => {
               飲食屋台に特化した特別な機能も!?
             </p>
 
-            <img className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible" src="src/assets/appimage1.png" />
+            <img className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible" src="src\assets\appimage1.png" />
           </div>
 
-          <img className="hidden md:block" src="src/assets/appimage1.png" />
+          <img className="hidden md:block" src="src\assets\appimage1.png" />
           
         </div>
 
@@ -401,10 +397,10 @@ const RequirementSection = () => {
               もっと早稲田祭を楽しもう。
             </p>
 
-            <img className="md:hidden absolute z-0 top-50 left-[50%] transform -translate-x-1/2 w-[190px] h-full object-cover opacity-30 overflow-visible" src="src/assets/appimage2.png" alt="アプリ画面" />
+            <img className="md:hidden absolute z-0 top-50 left-[50%] transform -translate-x-1/2 w-[190px] h-full object-cover opacity-30 overflow-visible" src="src\assets\appimage2.png" alt="アプリ画面" />
           </div>
 
-          <img className="hidden md:block" src="src/assets/appimage2.png" alt="アプリ画面" />
+          <img className="hidden md:block" src="src\assets\appimage2.png" alt="アプリ画面" />
 
           <div className="md:w-[450px] md:self-end mt-50 md:mt-0 relative">
             <h1 className="font-bebas text-5xl md:text-9xl text-white relative ">
@@ -426,7 +422,7 @@ const RequirementSection = () => {
         </div>
 
         <div className="md:flex md:max-w-7xl  items-center justify-between w-full relative z-20">
-          <img className="hidden md:block ml-20" src="src/assets/appimage3.png" />
+          <img className="hidden md:block ml-20" src="src\assets\appimage3.png" />
           <div className="relative">
             <h1 className="font-bebas text-5xl md:text-9xl text-white relative text-right z-10">
               04
@@ -445,7 +441,7 @@ const RequirementSection = () => {
               混雑の緩和を目指します！
             </p>
 
-            <img className="md:hidden absolute z-0 top-10 left-[-50px]  w-[190px] h-full object-cover opacity-30 overflow-visible" src="src/assets/appimage3.png" alt="アプリ画面" />
+            <img className="md:hidden absolute z-0 top-10 left-[-50px]  w-[190px] h-full object-cover opacity-30 overflow-visible" src="src\assets\appimage3.png" alt="アプリ画面" />
           </div>
         </div>
       </section>
