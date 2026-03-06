@@ -295,7 +295,7 @@ const ConceptSection = () => {
       </div>
 
       <div className="absolute top-10 right-0 h-[90%] z-0 pointer-events-none">
-        <img src="/public/tree.png" alt="" className="max-h-full relative hidden md:block" style={{ objectPosition: "right center" }} />
+        <img src="/tree.png" alt="" className="max-h-full relative hidden md:block" style={{ objectPosition: "right center" }} />
         <AppleShape className="absolute bottom-20 w-20 h-auto fill-[#f5f5f5]" />
         <AppleShape className="absolute bottom-30 left-1/4 rotate-[-60deg] w-25 h-auto fill-[#FF4B4B]" />
       </div>
@@ -374,10 +374,10 @@ const RequirementSection = () => {
               飲食屋台に特化した特別な機能も!?
             </p>
 
-            <img className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible" src="/public/appimage1.png" />
+            <img className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible" src="/appimage1.png" />
           </div>
 
-          <img className="hidden md:block" src="/public/appimage1.png" />
+          <img className="hidden md:block" src="/appimage1.png" />
           
         </div>
 
@@ -397,10 +397,10 @@ const RequirementSection = () => {
               もっと早稲田祭を楽しもう。
             </p>
 
-            <img className="md:hidden absolute z-0 top-50 left-[50%] transform -translate-x-1/2 w-[190px] h-full object-cover opacity-30 overflow-visible" src="/public/appimage2.png" alt="アプリ画面" />
+            <img className="md:hidden absolute z-0 top-50 left-[50%] transform -translate-x-1/2 w-[190px] h-full object-cover opacity-30 overflow-visible" src="/appimage2.png" alt="アプリ画面" />
           </div>
 
-          <img className="hidden md:block" src="/public/appimage2.png" alt="アプリ画面" />
+          <img className="hidden md:block" src="/appimage2.png" alt="アプリ画面" />
 
           <div className="md:w-[450px] md:self-end mt-50 md:mt-0 relative">
             <h1 className="font-bebas text-5xl md:text-9xl text-white relative ">
@@ -422,7 +422,7 @@ const RequirementSection = () => {
         </div>
 
         <div className="md:flex md:max-w-7xl  items-center justify-between w-full relative z-20">
-          <img className="hidden md:block ml-20" src="/public/appimage3.png" />
+          <img className="hidden md:block ml-20" src="/appimage3.png" />
           <div className="relative">
             <h1 className="font-bebas text-5xl md:text-9xl text-white relative text-right z-10">
               04
@@ -441,7 +441,7 @@ const RequirementSection = () => {
               混雑の緩和を目指します！
             </p>
 
-            <img className="md:hidden absolute z-0 top-10 left-[-50px]  w-[190px] h-full object-cover opacity-30 overflow-visible" src="/public/appimage3.png" alt="アプリ画面" />
+            <img className="md:hidden absolute z-0 top-10 left-[-50px]  w-[190px] h-full object-cover opacity-30 overflow-visible" src="/appimage3.png" alt="アプリ画面" />
           </div>
         </div>
       </section>
@@ -465,7 +465,7 @@ const RolesSection = () => {
           color: "text-[#8CC63F]",
           description:
             "フロントエンド・バックエンドともにコードやサービスを使って実装していきます。今回は、ReactNativeというフレームワーク、言語を使用する予定です。",
-          image: "/public/jobimage1.png",
+          image: "/jobimage1.png",
         },
         {
           id: "designer",
@@ -474,7 +474,7 @@ const RolesSection = () => {
           color: "text-[#8CC63F]",
           description:
             "アプリのページデザイン、UIパーツデザイン、地図データデザイン、アプリ広報の際に生じるデザインなど、AppPJに関わる全てのデザインを担当します。",
-          image: "/public/jobimage2.png",
+          image: "/jobimage2.png",
         },
       ],
     },
@@ -488,7 +488,7 @@ const RolesSection = () => {
           color: "text-[#8CC63F]",
           description:
             "・SNS、YouTube、サイトを用いた広報コンテンツを構想します。\n・アプリ認知度向上のためのユニークな広報企画を立案、実行します。",
-          image: "/public/jobimage3.png",
+          image: "/jobimage3.png",
         },
         {
           id: "ux-designer",
@@ -497,7 +497,7 @@ const RolesSection = () => {
           color: "text-[#8CC63F]",
           description:
             "・アプリ内のユーザー体験向上のためのアプリ独自の企画、コンテンツを立案、実行します。\n・アプリと他チームの連携企画の調整および運営をします。",
-          image: "/public/jobimage4.png",
+          image: "/jobimage4.png",
         },
       ],
     },
@@ -708,31 +708,31 @@ const MembersSection = () => {
       id: 1,
       role: "チーフ",
       name: "磯田陽太",
-      image: "/public/harutaApple.png",
+      image: "/harutaApple.png",
     },
     {
       id: 2,
       role: "サブチーフ",
       name: "叶竣太",
-      image: "/public/harutaApple.png",
+      image: "/harutaApple.png",
     },
     {
       id: 3,
       role: "サブチーフ",
       name: "岡島結南",
-      image: "/public/harutaApple.png",
+      image: "/harutaApple.png",
     },
     {
       id: 4,
       role: "エンジニア",
       name: "田中太郎",
-      image: "/public/harutaApple.png",
+      image: "/harutaApple.png",
     },
     {
       id: 5,
       role: "広報プランナー",
       name: "鈴木一郎",
-      image: "/public/harutaApple.png",
+      image: "/harutaApple.png",
     },
   ];
 
