@@ -722,14 +722,14 @@ const MembersSection = () => {
     },
     {
       id: 3,
-      role: "エンジニア",
-      name: "山田太郎",
+      role: "サブチーフ",
+      name: "岡島結南",
       image: "src/assets/harutaApple.png",
     },
     {
       id: 4,
-      role: "デザイナー",
-      name: "佐藤花子",
+      role: "エンジニア",
+      name: "田中太郎",
       image: "src/assets/harutaApple.png",
     },
     {
@@ -843,7 +843,7 @@ const EntrySection = () => {
   return (
     <section
       id="entry"
-      // 上部を丸め、上のセクションに少し被せるデザイン
+      
       className="bg-[#FF4B4B] text-white pt-24 pb-16 px-6 md:px-12 lg:px-20 rounded-t-[40px] md:rounded-t-[80px] w-full relative -mt-10 z-30"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-10 lg:gap-12 xl:gap-20">
@@ -882,12 +882,12 @@ const EntrySection = () => {
 
           {/* ボタン */}
           <a
-            href="#" // ※実際の応募フォームのURLを設定してください
+            href="#" // フォームURL未挿入
             className="relative flex items-center bg-white text-[#FF4B4B] rounded-full pl-8 pr-16 py-4 md:py-5 font-bold text-xl md:text-2xl hover:scale-105 transition-transform duration-300 shrink-0 mt-4 xl:mt-0"
           >
             <span>フォームはコチラ</span>
 
-            {/* リンゴアイコン (ボタン右端に被せる) */}
+            {/* リンゴアイコン */}
             <div className="absolute right-[-24px] md:right-[-32px] top-1/2 -translate-y-1/2 w-20 h-20 md:w-24 md:h-24 drop-shadow-[5px_5px_0px_#B22222]">
               <svg viewBox="0 0 958 939" className="w-full h-full">
                 {/* 茎 */}
@@ -951,7 +951,7 @@ const EntrySection = () => {
 
 export default function AppPJLanding() {
   return (
-    // 【重要】w-full, max-w-[100vw], overflow-x-hidden を追加し、全画面の横揺れを強制ブロック
+    
     <div className="bg-[#8CC63F] min-h-screen w-full max-w-[100vw] overflow-x-hidden pt-4 text-black selection:bg-[#FF4B4B] selection:text-white relative">
       <style>{`
         @keyframes fadeInUp {
