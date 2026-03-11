@@ -128,15 +128,15 @@ const Navbar = () => {
           <div className="flex flex-col items-end gap-2 md:flex-row md:items-center md:gap-10 font-bold text-black pt-1 md:pt-0">
             <a
               href="#entry"
-              className="bg-[#FF4B4B] text-white px-4 py-1.5 md:px-6 md:py-4 rounded-full hover:bg-opacity-90 transition-all text-[14px] md:text-base tracking-wider order-1 md:order-2 mb-1 md:mb-0"
+              className="bg-[#FF4B4B] text-white px-4 py-1.5 md:px-6 md:py-4 rounded-full hover:bg-opacity-90 hover:text-[#FF4B4B] hover:bg-[#F5F5F5] transition-all text-[14px] md:text-base tracking-wider order-1 md:order-2 mb-1 md:mb-0"
             >
               応募フォーム
             </a>
             
             <div className="flex flex-col items-end gap-1.5 md:flex-row md:items-center md:gap-10 order-2 md:order-1 md:mr-6 text-[14px] md:text-base pr-1 md:pr-0">
-              <a href="#features" className="hover:text-black/70 md:hover:text-[#8CC63F] transition-colors tracking-widest">機能</a>
-              <a href="#jobs" className="hover:text-black/70 md:hover:text-[#8CC63F] transition-colors tracking-widest">仕事内容</a>
-              <a href="#members" className="hover:text-black/70 md:hover:text-[#8CC63F] transition-colors tracking-widest">メンバー</a>
+              <a href="#features" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">機能</a>
+              <a href="#jobs" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">仕事内容</a>
+              <a href="#members" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">メンバー</a>
             </div>
           </div>
         </div>
@@ -284,9 +284,6 @@ const ConceptSection = () => {
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.4s' }}>
               僕たちが作ったアプリで<br />来場者・さんさんが<br className="md:hidden"/>企画を楽しんでる瞬間。<br />隈ステのバックスクリーンで<br className="md:hidden"/>広報されてる瞬間。<br />早稲田を、日本を、<br className="md:hidden"/>世界を震わせる瞬間。
             </p>
-            <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.6s' }}>
-              能力だって、調整だって、<br />アプリの意義だって、全部後付け。
-            </p>
             <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.8s' }}>
               できたら、やばい。<br className="md:hidden"/>できたら、やばい。<br />本当にできてしまったら、やばい。<br />をともに実現しよう。
             </p>
@@ -345,9 +342,10 @@ const WindingDottedLine = () => (
 
 const RequirementSection = () => {
   return (
+    
     <>
     
-      <section className="px-6 md:px-0 max-w-7xl m-0 mx-auto bg-[#8CC63F] mb-40    w-full space-y-20 relative ">
+      <section id="features" className="px-6 md:px-0 max-w-7xl m-0 mx-auto bg-[#8CC63F] mb-40    w-full space-y-20 relative ">
         <SectionTitle
           enTitle="REQUIREMENT"
           jaTitle="機能"
@@ -878,7 +876,7 @@ const EntrySection = () => {
               <br className="hidden md:block" />
               さい。なくても大丈夫です。
             </li>
-            <li>・志望者数が多すぎる場合は、選考があります。</li>
+            <li>・選考があります。</li>
           </ul>
 
           {/* ボタン */}
