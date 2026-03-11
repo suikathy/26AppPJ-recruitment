@@ -134,9 +134,9 @@ const Navbar = () => {
             </a>
             
             <div className="flex flex-col items-end gap-1.5 md:flex-row md:items-center md:gap-10 order-2 md:order-1 md:mr-6 text-[14px] md:text-base pr-1 md:pr-0">
-              <a href="#features" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">機能</a>
-              <a href="#jobs" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">仕事内容</a>
-              <a href="#members" className="hover:text-black/70 md:hover:text-[#f5f5f5] transition-colors tracking-widest">メンバー</a>
+              <a href="#features" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">機能</a>
+              <a href="#jobs" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">仕事内容</a>
+              <a href="#members" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">メンバー</a>
             </div>
           </div>
         </div>
