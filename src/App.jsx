@@ -127,7 +127,8 @@ const Navbar = () => {
           {/* 右側のナビゲーションとボタン（画像通りの右揃え縦並びに修正） */}
           <div className="flex flex-col items-end gap-2 md:flex-row md:items-center md:gap-10 font-bold text-black pt-1 md:pt-0">
             <a
-              href="#entry"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdHunU17NoOJthZkNOid1NgsYKoU7wJRtdxvtm6LALR0hAf-w/viewform?usp=header"
+              target="_blank"
               className="bg-[#FF4B4B] text-white px-4 py-1.5 md:px-6 md:py-4 rounded-full hover:bg-opacity-90 hover:text-[#FF4B4B] hover:bg-[#F5F5F5] transition-all text-[14px] md:text-base tracking-wider order-1 md:order-2 mb-1 md:mb-0"
             >
               応募フォーム
@@ -216,7 +217,7 @@ const Hero = () => {
           </div>
           <div className="absolute bottom-[10%] right-[-5%] z-30 pointer-events-none">
             <div className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-40 h-40 rounded-full flex flex-col items-center justify-center font-bold" style={{ animationDelay: '0.8s' }}>
-              <span className="text-2xl tracking-widest">2月28日</span>
+              <span className="text-2xl tracking-widest">3月31日</span>
               <span className="text-2xl tracking-widest mt-0.5">まで！</span>
             </div>
           </div>
@@ -246,7 +247,7 @@ const Hero = () => {
         {/* 期限バッジ */}
         <div className="md:hidden absolute bottom-[8%] right-[8%] z-30 pointer-events-none">
           <div className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-[100px] h-[100px] rounded-full flex flex-col items-center justify-center font-bold shadow-lg" style={{ animationDelay: '0.8s' }}>
-            <span className="text-[16px] tracking-widest leading-tight">2月28日</span>
+            <span className="text-[16px] tracking-widest leading-tight">3月31日</span>
             <span className="text-[16px] tracking-widest leading-tight">まで！</span>
           </div>
         </div>
@@ -717,26 +718,21 @@ const MembersSection = () => {
       id: 2,
       role: "サブチーフ",
       name: "叶竣太",
-      image: "/harutaApple.png",
+      image: "/shuntaApple.png",
     },
     {
       id: 3,
       role: "サブチーフ",
       name: "岡島結南",
-      image: "/harutaApple.png",
+      image: "/yuinaApple.png",
     },
     {
       id: 4,
-      role: "エンジニア",
-      name: "田中太郎",
-      image: "/harutaApple.png",
+      role: "参加まってるよ！",
+      name: "",
+      image: "/andmore.png",
     },
-    {
-      id: 5,
-      role: "広報プランナー",
-      name: "鈴木一郎",
-      image: "/harutaApple.png",
-    },
+    
   ];
 
   // 横スクロール時にプログレスバーを更新
@@ -881,7 +877,8 @@ const EntrySection = () => {
 
           {/* ボタン */}
           <a
-            href="#" // フォームURL未挿入
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdHunU17NoOJthZkNOid1NgsYKoU7wJRtdxvtm6LALR0hAf-w/viewform?usp=header" // フォームURL未挿入
+            target="_blank"
             className="relative flex items-center bg-white text-[#FF4B4B] rounded-full pl-8 pr-16 py-4 md:py-5 font-bold text-xl md:text-2xl hover:scale-105 transition-transform duration-300 shrink-0 mt-4 xl:mt-0"
           >
             <span>フォームはコチラ</span>
