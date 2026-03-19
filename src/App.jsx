@@ -12,7 +12,7 @@ const useScrollReveal = (threshold = 0.2) => {
           if (ref.current) observer.unobserve(ref.current); // 一度発火したら監視を解除
         }
       },
-      { threshold } // 要素が何%見えたら発火するか
+      { threshold }, // 要素が何%見えたら発火するか
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -100,7 +100,9 @@ const Navbar = () => {
   const logoColor = "#F5F5F5"; // スマホ版は常に白
 
   return (
-    <div className={`md:fixed top-0 left-0 w-full z-50 flex justify-center transition-all duration-500 ${!isMobile && isScrolled ? 'md:pt-4' : 'pt-6 md:pt-6'}`}>
+    <div
+      className={`md:fixed top-0 left-0 w-full z-50 flex justify-center transition-all duration-500 ${!isMobile && isScrolled ? "md:pt-4" : "pt-6 md:pt-6"}`}
+    >
       <div className="w-full max-w-[1440px] px-6 md:px-12">
         <div
           className={`rounded-[30px] md:rounded-full flex justify-between items-start md:items-center transition-all duration-500 ${
@@ -111,15 +113,15 @@ const Navbar = () => {
         >
           {/* 左側のロゴ部分 */}
           <div className="hidden md:block pt-1 md:pt-0">
-            <AppleLogo 
-            className="w-auto h-10 md:h-12 transition-colors duration-500" 
-            color={isScrolled ? "#8DC619" : "#F5F5F5"} 
-          /></div>
-          
+            <AppleLogo
+              className="w-auto h-10 md:h-12 transition-colors duration-500"
+              color={isScrolled ? "#8DC619" : "#F5F5F5"}
+            />
+          </div>
 
           <div className="md:hidden pt-1 md:pt-0">
-            <AppleLogo 
-              className="w-auto h-[50px]  transition-colors duration-500" 
+            <AppleLogo
+              className="w-auto h-[50px]  transition-colors duration-500"
               color={logoColor} // スマホ版は常に白色、PC版はスクロールに応じて色変化
             />
           </div>
@@ -133,11 +135,26 @@ const Navbar = () => {
             >
               応募フォーム
             </a>
-            
+
             <div className="flex flex-col items-end gap-1.5 md:flex-row md:items-center md:gap-10 order-2 md:order-1 md:mr-6 text-[14px] md:text-base pr-1 md:pr-0">
-              <a href="#features" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">機能</a>
-              <a href="#jobs" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">仕事内容</a>
-              <a href="#members" className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest">メンバー</a>
+              <a
+                href="#features"
+                className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest"
+              >
+                機能
+              </a>
+              <a
+                href="#jobs"
+                className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest"
+              >
+                仕事内容
+              </a>
+              <a
+                href="#members"
+                className="hover:text-black/70 md:hover:text-[#FF4B4B] transition-colors tracking-widest"
+              >
+                メンバー
+              </a>
             </div>
           </div>
         </div>
@@ -163,7 +180,10 @@ const BigAppleSVG = () => {
   return (
     <div className="relative w-full aspect-square md:w-full md:h-full">
       {/* 影の部分 */}
-      <svg viewBox="0 0 958 939" className="absolute top-[8%] left-[8%] md:top-[50px] md:left-[60px] w-full h-full opacity-100">
+      <svg
+        viewBox="0 0 958 939"
+        className="absolute top-[8%] left-[8%] md:top-[50px] md:left-[60px] w-full h-full opacity-100"
+      >
         {applePaths("#4b6b25", "#4b6b25")}
       </svg>
       {/* 白いリンゴ本体 */}
@@ -188,35 +208,48 @@ const ScrollIndicator = () => (
         style={{ writingMode: "vertical-rl" }}
       >
         <span className="hidden md:block">SCROLL!!</span>
-        <span  className="md:hidden">SWIPE!!</span>
+        <span className="md:hidden">SWIPE!!</span>
       </div>
     </div>
   </div>
 );
 
-
 const Hero = () => {
   return (
     <section className="bg-[#8CC63F] w-full h-[100svh] min-h-[600px] md:min-h-screen relative overflow-hidden">
       <div className="w-full h-full max-w-[1440px] mx-auto relative flex items-center justify-center">
-
         {/* --- PC用レイアウト (md:flex) --- */}
         <div className="hidden md:flex relative w-[800px] h-[800px] items-center justify-center pointer-events-auto z-10">
           <div className="opacity-0 animate-scale-in w-full h-full">
             <BigAppleSVG />
           </div>
           <div className="absolute top-[15%] left-[-100px] z-20 pointer-events-none text-left">
-            <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
               <h1 className="text-[144px] font-black text-black leading-[1.05]">
-                AppPJ<br />メンバー<br />募集。
+                AppPJ
+                <br />
+                メンバー
+                <br />
+                募集。
               </h1>
             </div>
-            <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <p className="text-2xl font-bold text-black mt-6 ml-2">できたら、やばい。</p>
+            <div
+              className="opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <p className="text-2xl font-bold text-black mt-6 ml-2">
+                できたら、やばい。
+              </p>
             </div>
           </div>
           <div className="absolute bottom-[10%] right-[-5%] z-30 pointer-events-none">
-            <div className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-40 h-40 rounded-full flex flex-col items-center justify-center font-bold" style={{ animationDelay: '0.8s' }}>
+            <div
+              className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-40 h-40 rounded-full flex flex-col items-center justify-center font-bold"
+              style={{ animationDelay: "0.8s" }}
+            >
               <span className="text-2xl tracking-widest">3月31日</span>
               <span className="text-2xl tracking-widest mt-0.5">まで！</span>
             </div>
@@ -224,41 +257,62 @@ const Hero = () => {
         </div>
 
         {/* --- スマホ用レイアウト (md:hidden) --- */}
-        
+
         {/* リンゴ */}
         <div className="md:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[420px] z-10 pointer-events-none">
           <div className="opacity-0 animate-scale-in">
             <BigAppleSVG />
           </div>
         </div>
-        
+
         {/* キャッチコピー */}
         <div className="md:hidden absolute top-[30%] left-[8%] z-20 pointer-events-none text-left">
-          <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <div
+            className="opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <h1 className="text-[54px] font-black text-black leading-[1.05] tracking-tight">
-              AppPJ<br />メンバー<br />募集。
+              AppPJ
+              <br />
+              メンバー
+              <br />
+              募集。
             </h1>
           </div>
-          <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <p className="text-[14px] font-bold text-black mt-3 ml-1">できたら、やばい。</p>
+          <div
+            className="opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
+            <p className="text-[14px] font-bold text-black mt-3 ml-1">
+              できたら、やばい。
+            </p>
           </div>
         </div>
 
         {/* 期限バッジ */}
         <div className="md:hidden absolute bottom-[8%] right-[8%] z-30 pointer-events-none">
-          <div className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-[100px] h-[100px] rounded-full flex flex-col items-center justify-center font-bold shadow-lg" style={{ animationDelay: '0.8s' }}>
-            <span className="text-[16px] tracking-widest leading-tight">3月31日</span>
-            <span className="text-[16px] tracking-widest leading-tight">まで！</span>
+          <div
+            className="opacity-0 animate-pop-in bg-[#FF4B4B] text-white w-[100px] h-[100px] rounded-full flex flex-col items-center justify-center font-bold shadow-lg"
+            style={{ animationDelay: "0.8s" }}
+          >
+            <span className="text-[16px] tracking-widest leading-tight">
+              3月31日
+            </span>
+            <span className="text-[16px] tracking-widest leading-tight">
+              まで！
+            </span>
           </div>
         </div>
 
         {/* SWIPE!! (共通) */}
         <div className="absolute bottom-[8%] left-[6%] md:bottom-[12%] md:left-auto md:right-[5%] z-40">
-          <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
+          <div
+            className="opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "1.2s" }}
+          >
             <ScrollIndicator />
           </div>
         </div>
-
       </div>
     </section>
   );
@@ -273,34 +327,71 @@ const ConceptSection = () => {
           {/* 見出し */}
           <div className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
             <h2 className="text-6xl md:text-[10vw] font-black leading-[1.1] font-bold text-[#f5f5f5] mb-12 tracking-tighter">
-              できたら、<br />やばい。
+              できたら、
+              <br />
+              やばい。
             </h2>
           </div>
 
           {/* テキスト段落（順番にフワッと出るようにdelayを設定） */}
           <div className="space-y-10 text-[18px] md:text-2xl font-bold leading-loose text-black">
-            <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.2s' }}>
-              早稲田祭初のアプリを作る。<br />僕は、なんでそんなことするのか。<br />ただ、見てみたくなったから。
+            <p
+              className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: "0.2s" }}
+            >
+              早稲田祭初のアプリを作る。
+              <br />
+              僕は、なんでそんなことするのか。
+              <br />
+              ただ、見てみたくなったから。
             </p>
-            <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.4s' }}>
-              僕たちが作ったアプリで<br />来場者・さんさんが<br className="md:hidden"/>企画を楽しんでる瞬間。<br />隈ステのバックスクリーンで<br className="md:hidden"/>広報されてる瞬間。<br />早稲田を、日本を、<br className="md:hidden"/>世界を震わせる瞬間。
+            <p
+              className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: "0.4s" }}
+            >
+              僕たちが作ったアプリで
+              <br />
+              来場者・さんさんが
+              <br className="md:hidden" />
+              企画を楽しんでる瞬間。
+              <br />
+              隈ステのバックスクリーンで
+              <br className="md:hidden" />
+              広報されてる瞬間。
+              <br />
+              早稲田を、日本を、
+              <br className="md:hidden" />
+              世界を震わせる瞬間。
             </p>
-            <p className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`} style={{ animationDelay: '0.8s' }}>
-              できたら、やばい。<br className="md:hidden"/>できたら、やばい。<br />本当にできてしまったら、やばい。<br />をともに実現しよう。
+            <p
+              className={`${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: "0.8s" }}
+            >
+              できたら、やばい。
+              <br className="md:hidden" />
+              できたら、やばい。
+              <br />
+              本当にできてしまったら、やばい。
+              <br />
+              をともに実現しよう。
             </p>
           </div>
         </div>
       </div>
 
       <div className="absolute top-10 right-0 h-[90%] z-0 pointer-events-none">
-        <img src="/tree.png" alt="" className="max-h-full relative hidden md:block" style={{ objectPosition: "right center" }} />
+        <img
+          src="/tree.png"
+          alt=""
+          className="max-h-full relative hidden md:block"
+          style={{ objectPosition: "right center" }}
+        />
         <AppleShape className="absolute bottom-20 w-20 h-auto fill-[#f5f5f5]" />
         <AppleShape className="absolute bottom-30 left-1/4 rotate-[-60deg] w-25 h-auto fill-[#FF4B4B]" />
       </div>
     </section>
   );
 };
-
 
 const SectionTitle = ({ enTitle, jaTitle, className = "" }) => (
   // classNameを追加で受け取れるようにしておくと、特定の場所だけ余白を変えたい時などに便利です
@@ -317,8 +408,6 @@ const SectionTitle = ({ enTitle, jaTitle, className = "" }) => (
     </h2>
   </div>
 );
-
-
 
 const WindingDottedLine = () => (
   // 修正：赤線をずっと下（top-[100px]~）にずらし、デザイン通りAppleや画像を通過するように。
@@ -343,16 +432,14 @@ const WindingDottedLine = () => (
 
 const RequirementSection = () => {
   return (
-    
     <>
-    
-      <section id="features" className="px-6 md:px-0 max-w-7xl m-0 mx-auto bg-[#8CC63F] mb-40    w-full space-y-20 relative ">
-        <SectionTitle
-          enTitle="REQUIREMENT"
-          jaTitle="機能"
-        />
+      <section
+        id="features"
+        className="px-6 md:px-0 max-w-7xl m-0 mx-auto bg-[#8CC63F] mb-40    w-full space-y-20 relative "
+      >
+        <SectionTitle enTitle="REQUIREMENT" jaTitle="機能" />
         <WindingDottedLine />
-        
+
         <div className="md:flex w-full md:max-w-7xl items-center justify-between  relative z-20">
           <div className="relative ">
             {/* <RequirementTitle number="01" detailTitle="地図機能付き企画検索" /> */}
@@ -364,20 +451,28 @@ const RequirementSection = () => {
             </h1>
 
             <p className="mt-4 text-[18px] md:text-2xl font-medium leading-[2.5] md:leading-[2] relative z-10">
-              早稲田祭の「場所」と「企画」を<br className="md:hidden"/>直感的に繋ぐ、<br className="md:hidden"/>アプリの中核機能！！
+              早稲田祭の「場所」と「企画」を
+              <br className="md:hidden" />
+              直感的に繋ぐ、
+              <br className="md:hidden" />
+              アプリの中核機能！！
               <br />
-              早稲田・戸山の全範囲、<br className="md:hidden"/>全企画を網羅予定。
+              早稲田・戸山の全範囲、
+              <br className="md:hidden" />
+              全企画を網羅予定。
               <br />
               これがあれば早稲田祭でもう迷わない！
               <br />
               飲食屋台に特化した特別な機能も!?
             </p>
 
-            <img className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible" src="/appimage1.png" />
+            <img
+              className="absolute z-0 top-10 left-50 w-[340px] h-full object-cover md:hidden opacity-30 overflow-visible"
+              src="/appimage1.png"
+            />
           </div>
 
           <img className="hidden md:block" src="/appimage1.png" />
-          
         </div>
 
         <div className="md:flex md:flex-row-reverse items-center justify-between w-full md:max-w-7xl relative z-20">
@@ -396,10 +491,18 @@ const RequirementSection = () => {
               もっと早稲田祭を楽しもう。
             </p>
 
-            <img className="md:hidden absolute z-0 top-50 left-[50%] transform -translate-x-1/2 w-[190px] h-full object-cover opacity-30 overflow-visible" src="/appimage2.png" alt="アプリ画面" />
+            <img
+              className="md:hidden absolute z-0 top-[50px] left-[50%] transform -translate-x-1/2 w-[190px] h-auto opacity-30 pointer-events-none max-w-none"
+              src="/appimage2.png"
+              alt="アプリ画面"
+            />
           </div>
 
-          <img className="hidden md:block" src="/appimage2.png" alt="アプリ画面" />
+          <img
+            className="hidden md:block"
+            src="/appimage2.png"
+            alt="アプリ画面"
+          />
 
           <div className="md:w-[450px] md:self-end mt-50 md:mt-0 relative">
             <h1 className="font-bebas text-5xl md:text-9xl text-white relative ">
@@ -440,7 +543,11 @@ const RequirementSection = () => {
               混雑の緩和を目指します！
             </p>
 
-            <img className="md:hidden absolute z-0 top-10 left-[-50px]  w-[190px] h-full object-cover opacity-30 overflow-visible" src="/appimage3.png" alt="アプリ画面" />
+            <img
+              className="md:hidden absolute z-0 top-10 left-[-50px] w-[190px] h-auto opacity-30 pointer-events-none max-w-none"
+              src="/appimage3.png"
+              alt="アプリ画面"
+            />
           </div>
         </div>
       </section>
@@ -572,12 +679,14 @@ const RolesSection = () => {
               className={`text-4xl md:text-5xl font-black mb-10 ${selectedRole.color} leading-tight`}
             >
               {/* \n を md:hidden な <br> に変換して出力 */}
-              {selectedRole.dialogTitle.split('\n').map((line, index, array) => (
-                <React.Fragment key={index}>
-                  {line}
-                  {index < array.length - 1 && <br className="md:hidden" />}
-                </React.Fragment>
-              ))}
+              {selectedRole.dialogTitle
+                .split("\n")
+                .map((line, index, array) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < array.length - 1 && <br className="md:hidden" />}
+                  </React.Fragment>
+                ))}
             </h3>
 
             {/* ② 画像と説明文を横並びのFlexboxに */}
@@ -650,7 +759,8 @@ const MemberCard = ({ member }) => {
       {/* 回転する本体 */}
       <div
         className={`relative w-full h-full transition-transform duration-700 ease-in-out z-10 ${
-          !isFlipped && "group-hover:translate-x-[5px] group-hover:translate-y-[5px]"
+          !isFlipped &&
+          "group-hover:translate-x-[5px] group-hover:translate-y-[5px]"
         }`}
         style={{
           transformStyle: "preserve-3d",
@@ -732,7 +842,6 @@ const MembersSection = () => {
       name: "",
       image: "/andmore.png",
     },
-    
   ];
 
   // 横スクロール時にプログレスバーを更新
@@ -838,7 +947,6 @@ const EntrySection = () => {
   return (
     <section
       id="entry"
-      
       className="bg-[#FF4B4B] text-white pt-24 pb-16 px-6 md:px-12 lg:px-20 rounded-t-[40px] md:rounded-t-[80px] w-full relative -mt-10 z-30"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-10 lg:gap-12 xl:gap-20">
@@ -947,7 +1055,6 @@ const EntrySection = () => {
 
 export default function AppPJLanding() {
   return (
-    
     <div className="bg-[#8CC63F] min-h-screen w-full max-w-[100vw] overflow-x-hidden pt-4 text-black selection:bg-[#FF4B4B] selection:text-white relative">
       <style>{`
         @keyframes fadeInUp {
